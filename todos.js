@@ -2,7 +2,6 @@ var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
 var buttonElement = document.querySelector('#app button');
 
-console.log('comer o cu de quem ta lendo');
 var todos = [
     'fazer cafe',
     'estudar js',
