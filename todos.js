@@ -35,6 +35,7 @@ function renderTodos() {
         todoElement.appendChild(linkElement);
 
         listElement.appendChild(todoElement);
+        console.log('comer o cu de quem ta lendo');
     }
 }
 
