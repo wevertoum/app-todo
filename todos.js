@@ -9,15 +9,34 @@ var todos = [
 ];
 
 function renderTodos() {
+    listElement.innerHTML = '';
+
     for (todo of todos) {
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
+
+        var linkElement = document.createElement('a');
+
+        linkElement.setAttribute('href', '#');
+        linkElement.className = "btn btn-danger";
+
+        var pos = todos.indexOf(todo);
+        linkElement.setAttribute('onclick', 'deleteTodo(' +  pos + ')'); 
+
+        var linkText = document.createTextNode('Excluir');
+        
+
+        linkElement.appendChild(linkText)
+
+        /* adiciona o bootstrap na lista */
         todoElement.className = "list-group-item";
+
         todoElement.appendChild(todoText);
+        todoElement.appendChild(linkElement);
+
         listElement.appendChild(todoElement);
     }
 }
-
 
 /*
 function addStyleList() {
@@ -38,3 +57,10 @@ function addTodo() {
 }
 
 buttonElement.onclick = addTodo;
+
+/* exclui o TODO da lista de array*/
+
+function deleteTodo(pos) {
+    todos.splice(pos, 1);
+    renderTodos();
+}
