@@ -18,6 +18,7 @@ function renderTodos() {
         var linkElement = document.createElement('a');
 
         linkElement.setAttribute('href', '#');
+        /* adiciona o bootstrap no botão */
         linkElement.className = "btn btn-danger";
 
         var pos = todos.indexOf(todo);
@@ -27,7 +28,6 @@ function renderTodos() {
         
 
         linkElement.appendChild(linkText)
-
         /* adiciona o bootstrap na lista */
         todoElement.className = "list-group-item";
 
