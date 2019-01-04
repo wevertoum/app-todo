@@ -38,15 +38,6 @@ function renderTodos() {
     }
 }
 
-/*
-function addStyleList() {
-
-    var contElement = document.querySelectorAll('li');
-    contElement.forEach((e) => {
-        e.className = "list-group-item";
-    })
-} */
-
 window.onload = renderTodos;
 
 function addTodo() {
